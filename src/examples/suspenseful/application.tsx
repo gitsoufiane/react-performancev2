@@ -41,7 +41,7 @@ function Application() {
   if (loading) {
     return (
       <Container className="my-8 flex min-h-[400px] items-center justify-center">
-        <div className="text-center space-y-4">
+        <div className="space-y-4 text-center">
           <Spinner size="xl" />
           <p className="text-slate-600 dark:text-slate-400">
             Loading all data... This will take a while.
@@ -54,12 +54,11 @@ function Application() {
   return (
     <Container className="my-8 space-y-8">
       <section>
-        <h1 className="mb-2 text-3xl font-bold text-slate-900 dark:text-slate-100">
-          Suspenseful
-        </h1>
+        <h1 className="mb-2 text-3xl font-bold text-slate-900 dark:text-slate-100">Suspenseful</h1>
         <p className="text-slate-600 dark:text-slate-400">
           Traditional loading pattern: Everything waits for the slowest API. Notice how you see
-          nothing until ALL data has loaded (user + posts + todos). This feels slow and unresponsive.
+          nothing until ALL data has loaded (user + posts + todos). This feels slow and
+          unresponsive.
         </p>
         <div className="mt-4 rounded-md bg-red-50 p-4 dark:bg-red-900/20">
           <p className="text-sm font-medium text-red-800 dark:text-red-200">

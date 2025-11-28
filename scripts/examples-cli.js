@@ -28,8 +28,8 @@ async function discoverExamples() {
           path: `/src/examples/${entry.name}/index.tsx`,
           displayName: entry.name
             .split('-')
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ')
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' '),
         });
       } catch {
         // Skip directories without index.tsx
@@ -45,7 +45,7 @@ async function updateIndexHtml(examplePath) {
   const html = await readFile(INDEX_HTML_PATH, 'utf-8');
   const updated = html.replace(
     /<script type="module" src="\/src\/examples\/[^"]+\/index\.tsx"><\/script>/,
-    `<script type="module" src="${examplePath}"></script>`
+    `<script type="module" src="${examplePath}"></script>`,
   );
   await writeFile(INDEX_HTML_PATH, updated, 'utf-8');
 }

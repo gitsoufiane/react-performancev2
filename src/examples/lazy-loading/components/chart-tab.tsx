@@ -35,9 +35,7 @@ function BarChart({ data, title }: { data: ChartData[]; title: string }) {
           return (
             <div key={item.label} className="space-y-1">
               <div className="flex justify-between text-sm">
-                <span className="font-medium text-slate-900 dark:text-slate-100">
-                  {item.label}
-                </span>
+                <span className="font-medium text-slate-900 dark:text-slate-100">{item.label}</span>
                 <span className="text-slate-600 dark:text-slate-400">
                   ${item.value.toLocaleString()}
                 </span>
@@ -64,17 +62,13 @@ export function ChartTab() {
     <div className="space-y-6">
       <div className="flex items-start justify-between">
         <div>
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-            Sales Analytics
-          </h2>
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">Sales Analytics</h2>
           <p className="text-sm text-slate-600 dark:text-slate-400">
             Visual data representations and charts
           </p>
         </div>
         <div className="rounded-lg bg-purple-50 px-3 py-1 dark:bg-purple-900/20">
-          <p className="text-xs font-medium text-purple-800 dark:text-purple-200">
-            Lazy Loaded
-          </p>
+          <p className="text-xs font-medium text-purple-800 dark:text-purple-200">Lazy Loaded</p>
         </div>
       </div>
 
@@ -109,7 +103,8 @@ export function ChartTab() {
 
       <p className="text-sm text-slate-600 dark:text-slate-400">
         This component was only loaded when you clicked this tab. In a real app, this might include
-        heavy charting libraries like Chart.js or D3.js that you don&apos;t want in your initial bundle.
+        heavy charting libraries like Chart.js or D3.js that you don&apos;t want in your initial
+        bundle.
       </p>
     </div>
   );

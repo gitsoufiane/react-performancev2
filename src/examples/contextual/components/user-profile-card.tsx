@@ -18,9 +18,7 @@ export function UserProfileCard({ user }: UserProfileCardProps) {
           {user.name.charAt(0)}
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-            {user.name}
-          </h3>
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">{user.name}</h3>
           <p className="text-sm text-slate-600 dark:text-slate-400">{user.email}</p>
         </div>
       </div>

@@ -5,8 +5,7 @@ import { cn } from '../../utilities/cn';
 import { labelStyles, srOnlyStyles } from '../../utilities/styles';
 
 export interface InputProps
-  extends ComponentPropsWithoutRef<'input'>,
-    VariantProps<typeof inputVariants> {
+  extends ComponentPropsWithoutRef<'input'>, VariantProps<typeof inputVariants> {
   label?: string;
   hideLabel?: boolean;
   'data-testid'?: string;

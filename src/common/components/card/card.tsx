@@ -17,8 +17,7 @@ import {
 import { cn } from '../../utilities/cn';
 
 export interface CardProps
-  extends ComponentPropsWithoutRef<'article'>,
-    VariantProps<typeof cardVariants> {
+  extends ComponentPropsWithoutRef<'article'>, VariantProps<typeof cardVariants> {
   children?: ReactNode;
   as?: ElementType;
   'data-testid'?: string;
@@ -46,8 +45,7 @@ export const Card = memo(
 Card.displayName = 'Card';
 
 export interface CardHeaderProps
-  extends ComponentPropsWithoutRef<'header'>,
-    VariantProps<typeof cardHeaderVariants> {
+  extends ComponentPropsWithoutRef<'header'>, VariantProps<typeof cardHeaderVariants> {
   children?: ReactNode;
   'data-testid'?: string;
 }
@@ -71,8 +69,7 @@ export const CardHeader = memo(
 CardHeader.displayName = 'CardHeader';
 
 export interface CardTitleProps
-  extends ComponentPropsWithoutRef<'h3'>,
-    VariantProps<typeof cardTitleVariants> {
+  extends ComponentPropsWithoutRef<'h3'>, VariantProps<typeof cardTitleVariants> {
   children?: ReactNode;
   'data-testid'?: string;
 }
@@ -119,8 +116,7 @@ export const CardDescription = memo(
 CardDescription.displayName = 'CardDescription';
 
 export interface CardContentProps
-  extends ComponentPropsWithoutRef<'div'>,
-    VariantProps<typeof cardContentVariants> {
+  extends ComponentPropsWithoutRef<'div'>, VariantProps<typeof cardContentVariants> {
   children?: ReactNode;
   'data-testid'?: string;
 }
@@ -144,8 +140,7 @@ export const CardContent = memo(
 CardContent.displayName = 'CardContent';
 
 export interface CardFooterProps
-  extends ComponentPropsWithoutRef<'footer'>,
-    VariantProps<typeof cardFooterVariants> {
+  extends ComponentPropsWithoutRef<'footer'>, VariantProps<typeof cardFooterVariants> {
   children?: ReactNode;
   'data-testid'?: string;
 }

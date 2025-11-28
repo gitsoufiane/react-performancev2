@@ -121,7 +121,7 @@ function Application() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`border-b-2 pb-4 pt-2 text-sm font-medium transition-colors ${
+                className={`border-b-2 pt-2 pb-4 text-sm font-medium transition-colors ${
                   activeTab === tab.id
                     ? 'border-blue-500 text-blue-600 dark:text-blue-400'
                     : 'border-transparent text-slate-600 hover:border-slate-300 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100'

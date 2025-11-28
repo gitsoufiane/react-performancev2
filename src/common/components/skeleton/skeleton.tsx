@@ -4,8 +4,7 @@ import { skeletonVariants } from './skeleton.classes';
 import { cn } from '../../utilities/cn';
 
 export interface SkeletonProps
-  extends ComponentPropsWithoutRef<'div'>,
-    VariantProps<typeof skeletonVariants> {
+  extends ComponentPropsWithoutRef<'div'>, VariantProps<typeof skeletonVariants> {
   width?: string | number;
   height?: string | number;
   count?: number;

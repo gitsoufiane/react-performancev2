@@ -16,8 +16,7 @@ import { cn } from '../../utilities/cn';
 import { labelStyles, srOnlyStyles } from '../../utilities/styles';
 
 export interface TextareaProps
-  extends ComponentPropsWithoutRef<'textarea'>,
-    VariantProps<typeof textareaVariants> {
+  extends ComponentPropsWithoutRef<'textarea'>, VariantProps<typeof textareaVariants> {
   autoResize?: boolean;
   showCount?: boolean;
   label?: string;

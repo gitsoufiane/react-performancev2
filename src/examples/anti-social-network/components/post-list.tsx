@@ -10,10 +10,7 @@ interface PostListProps {
 export function PostList({ posts, onDeletePost }: PostListProps) {
   if (posts.length === 0) {
     return (
-      <EmptyState
-        title="No posts yet"
-        description="Create your first post using the form above."
-      />
+      <EmptyState title="No posts yet" description="Create your first post using the form above." />
     );
   }
 

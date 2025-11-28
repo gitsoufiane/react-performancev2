@@ -7,7 +7,7 @@ interface PrimeGridProps {
 
 export const PrimeGrid = memo(({ primes }: PrimeGridProps) => {
   return (
-    <div className="overflow-auto rounded-lg border-2 border-slate-300 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900 max-h-[600px]">
+    <div className="max-h-[600px] overflow-auto rounded-lg border-2 border-slate-300 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900">
       <div className="flex flex-wrap gap-2">
         {primes.map((prime) => (
           <Badge key={prime} variant="success">

@@ -14,7 +14,8 @@ import { Button } from '../button/button';
 import { cn } from '../../utilities/cn';
 
 export interface ChatInputProps
-  extends Omit<ComponentPropsWithoutRef<'form'>, 'onSubmit' | 'onChange'>,
+  extends
+    Omit<ComponentPropsWithoutRef<'form'>, 'onSubmit' | 'onChange'>,
     VariantProps<typeof chatInputVariants> {
   onSubmit?: (value: string) => void;
   placeholder?: string;

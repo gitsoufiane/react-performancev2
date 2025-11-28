@@ -2,7 +2,7 @@ import { getUser, listPostsForUser, listTodosForUser } from '$/common/api';
 import type { User, Post, Todo } from '../types';
 
 // Add artificial delay to simulate real network conditions
-const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export async function fetchUser(userId: number): Promise<User> {
   await delay(800); // Simulate network delay

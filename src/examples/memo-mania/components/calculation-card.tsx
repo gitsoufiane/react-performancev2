@@ -2,7 +2,11 @@ import { Button } from '$components/button';
 import { Input } from '$components/input';
 import { Card } from '$components/card';
 import type { Calculation } from '../types';
-import { calculate, getCalculationLabel, getCalculationDescription } from '../utilities/expensive-calculations';
+import {
+  calculate,
+  getCalculationLabel,
+  getCalculationDescription,
+} from '../utilities/expensive-calculations';
 
 interface CalculationCardProps {
   calculation: Calculation;
@@ -25,11 +29,7 @@ export function CalculationCard({ calculation, onUpdate, onDelete }: Calculation
             <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">{label}</h3>
             <p className="text-sm text-slate-600 dark:text-slate-400">{description}</p>
           </div>
-          <Button
-            size="small"
-            variant="danger"
-            onClick={() => onDelete(calculation.id)}
-          >
+          <Button size="small" variant="danger" onClick={() => onDelete(calculation.id)}>
             Delete
           </Button>
         </div>

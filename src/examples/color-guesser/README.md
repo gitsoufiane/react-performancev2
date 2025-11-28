@@ -48,11 +48,7 @@ function Application() {
   }
 
   // ❌ Calculating on every render (not memoized)
-  const gameStatus: GameStatus = hasGuessed
-    ? isWinner
-      ? 'correct'
-      : 'incorrect'
-    : 'waiting';
+  const gameStatus: GameStatus = hasGuessed ? (isWinner ? 'correct' : 'incorrect') : 'waiting';
 
   // ❌ New functions on every render
   function handleGuess() {
@@ -146,11 +142,7 @@ function Application() {
     // No need to reset isWinner - it's derived!
   }
 
-  return (
-    <Container className="my-8 space-y-8">
-      {/* ... rest of component */}
-    </Container>
-  );
+  return <Container className="my-8 space-y-8">{/* ... rest of component */}</Container>;
 }
 ```
 
@@ -357,7 +349,7 @@ function handleGuess() {
 }
 
 // React.memo sees a NEW function reference → re-renders anyway!
-<GameInput onSubmit={handleGuess} />
+<GameInput onSubmit={handleGuess} />;
 ```
 
 JavaScript compares functions by reference:
@@ -594,12 +586,12 @@ export default Application;
 
 ### Before Optimization
 
-| Action           | Components Re-rendered | Console Warnings |
-| ---------------- | ---------------------- | ---------------- |
-| Type in input    | 6 components           | ⚠️ setState warning |
-| Click Guess      | 6 components           | ⚠️ setState warning |
-| Click New Color  | 6 components           | ⚠️ setState warning |
-| Click Try Again  | 6 components           | ⚠️ setState warning |
+| Action          | Components Re-rendered | Console Warnings    |
+| --------------- | ---------------------- | ------------------- |
+| Type in input   | 6 components           | ⚠️ setState warning |
+| Click Guess     | 6 components           | ⚠️ setState warning |
+| Click New Color | 6 components           | ⚠️ setState warning |
+| Click Try Again | 6 components           | ⚠️ setState warning |
 
 ### After Optimization
 

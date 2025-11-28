@@ -28,12 +28,15 @@ export function PostForm({ onSubmit, isPending = false }: PostFormProps) {
   return (
     <Card>
       <CardContent className="p-6">
-        <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-4">
+        <h2 className="mb-4 text-xl font-semibold text-slate-900 dark:text-slate-100">
           Create a New Post
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <label htmlFor="title" className="block text-sm font-medium text-slate-700 dark:text-slate-300">
+            <label
+              htmlFor="title"
+              className="block text-sm font-medium text-slate-700 dark:text-slate-300"
+            >
               Title
             </label>
             <Input
@@ -48,7 +51,10 @@ export function PostForm({ onSubmit, isPending = false }: PostFormProps) {
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="body" className="block text-sm font-medium text-slate-700 dark:text-slate-300">
+            <label
+              htmlFor="body"
+              className="block text-sm font-medium text-slate-700 dark:text-slate-300"
+            >
               Body
             </label>
             <Textarea

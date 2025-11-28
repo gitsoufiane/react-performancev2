@@ -73,8 +73,9 @@ function Application() {
           Anti-Social Network
         </h1>
         <p className="text-slate-600 dark:text-slate-400">
-          Create and delete posts. Try creating or deleting a post - notice how you have to wait
-          for the server response? The UI feels sluggish because we&apos;re not using optimistic updates.
+          Create and delete posts. Try creating or deleting a post - notice how you have to wait for
+          the server response? The UI feels sluggish because we&apos;re not using optimistic
+          updates.
         </p>
       </section>
 
@@ -90,7 +91,7 @@ function Application() {
 
       <section>
         {isLoading ? (
-          <div className="text-center py-12">
+          <div className="py-12 text-center">
             <p className="text-slate-600 dark:text-slate-400">Loading posts...</p>
           </div>
         ) : (

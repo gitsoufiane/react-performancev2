@@ -1,4 +1,5 @@
 # React Performance, v2 Course
+
 This is a companion repository for the [React Performance, v2](https://frontendmasters.com/courses/react-performance-v2) course on Frontend Masters.
 [![Frontend Masters](https://static.frontendmasters.com/assets/brand/logos/full.png)](https://frontendmasters.com/courses/react-performance-v2)
 

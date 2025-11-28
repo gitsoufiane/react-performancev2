@@ -10,8 +10,10 @@ import {
 import { rangeVariants, rangeTrackVariants, rangeLabelVariants } from './range.classes';
 import { cn } from '../../utilities/cn';
 
-export interface RangeProps
-  extends Omit<ComponentPropsWithoutRef<'input'>, 'type' | 'size' | 'onChange'> {
+export interface RangeProps extends Omit<
+  ComponentPropsWithoutRef<'input'>,
+  'type' | 'size' | 'onChange'
+> {
   min?: number;
   max?: number;
   step?: number;

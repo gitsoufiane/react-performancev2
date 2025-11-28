@@ -23,11 +23,7 @@ function Application() {
   }
 
   // ❌ Computing status on every render (not memoized)
-  const gameStatus: GameStatus = hasGuessed
-    ? isWinner
-      ? 'correct'
-      : 'incorrect'
-    : 'waiting';
+  const gameStatus: GameStatus = hasGuessed ? (isWinner ? 'correct' : 'incorrect') : 'waiting';
 
   // ❌ New function created on every render
   function handleGuess() {
@@ -54,8 +50,8 @@ function Application() {
           Color Guesser
         </h1>
         <p className="text-slate-600 dark:text-slate-400">
-          Look at the color above and try to guess its hex code! Open the browser console to see
-          the performance problems.
+          Look at the color above and try to guess its hex code! Open the browser console to see the
+          performance problems.
         </p>
         <div className="mt-4 rounded-md bg-red-50 p-4 dark:bg-red-900/20">
           <p className="text-sm font-medium text-red-800 dark:text-red-200">

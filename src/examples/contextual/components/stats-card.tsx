@@ -43,9 +43,7 @@ export function StatsCard({ stats, onRefresh }: StatsCardProps) {
         <p className="text-xs text-slate-600 dark:text-slate-400">
           This component only uses <strong>stats</strong> from context
         </p>
-        <p className="mt-1 text-xs text-slate-500 dark:text-slate-500">
-          Updated {timeAgo}s ago
-        </p>
+        <p className="mt-1 text-xs text-slate-500 dark:text-slate-500">Updated {timeAgo}s ago</p>
       </div>
     </Card>
   );

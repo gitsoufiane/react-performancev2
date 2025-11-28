@@ -17,8 +17,7 @@ import {
 import { cn } from '../../utilities/cn';
 
 export interface AlertProps
-  extends ComponentPropsWithoutRef<'div'>,
-    VariantProps<typeof alertVariants> {
+  extends ComponentPropsWithoutRef<'div'>, VariantProps<typeof alertVariants> {
   children?: ReactNode;
   dismissible?: boolean;
   onDismiss?: () => void;
@@ -91,8 +90,7 @@ export const AlertTitle = memo(
 AlertTitle.displayName = 'AlertTitle';
 
 export interface AlertDescriptionProps
-  extends ComponentPropsWithoutRef<'div'>,
-    VariantProps<typeof alertDescriptionVariants> {
+  extends ComponentPropsWithoutRef<'div'>, VariantProps<typeof alertDescriptionVariants> {
   children?: ReactNode;
   'data-testid'?: string;
 }

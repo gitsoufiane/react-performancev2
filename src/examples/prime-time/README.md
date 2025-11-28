@@ -33,13 +33,7 @@ function Application() {
   // This expensive computation runs on EVERY keystroke
   const primes = useMemo(() => calculatePrimes(limit), [limit]);
 
-  return (
-    <Input
-      type="number"
-      value={limit}
-      onChange={(e) => setLimit(Number(e.target.value))}
-    />
-  );
+  return <Input type="number" value={limit} onChange={(e) => setLimit(Number(e.target.value))} />;
 }
 ```
 
@@ -102,11 +96,13 @@ function Application() {
 ```
 
 **Pros:**
+
 - ✅ Simpler - just one line to add `useDeferredValue`
 - ✅ Automatic - React handles the deferral
 - ✅ Less state to manage
 
 **Cons:**
+
 - ❌ No explicit control over when deferral happens
 - ❌ Have to compare values to know if updating
 
@@ -182,11 +178,13 @@ function Application() {
 ```
 
 **Pros:**
+
 - ✅ Explicit `isPending` state (no value comparison needed)
 - ✅ More control over what gets deferred
 - ✅ Clearer intent in the code
 
 **Cons:**
+
 - ❌ Requires managing two pieces of state
 - ❌ More boilerplate code
 - ❌ Need to wrap state update in `startTransition`
@@ -204,6 +202,7 @@ function Application() {
 ### Success Criteria
 
 After optimization:
+
 - ✅ Typing in the input should be smooth and responsive
 - ✅ Prime calculation should not block user input
 - ✅ Loading indicators should appear during calculations
@@ -319,23 +318,25 @@ export default Application;
 
 ## Key Differences
 
-| Aspect | useDeferredValue | useTransition |
-|--------|------------------|---------------|
-| **What you defer** | A value | A state update |
-| **State management** | Single piece of state | Two pieces of state |
-| **Pending indicator** | Compare values | Built-in `isPending` |
-| **Use case** | Best for derived/computed values | Best for your own state |
-| **Code simplicity** | Simpler | More explicit |
+| Aspect                | useDeferredValue                 | useTransition           |
+| --------------------- | -------------------------------- | ----------------------- |
+| **What you defer**    | A value                          | A state update          |
+| **State management**  | Single piece of state            | Two pieces of state     |
+| **Pending indicator** | Compare values                   | Built-in `isPending`    |
+| **Use case**          | Best for derived/computed values | Best for your own state |
+| **Code simplicity**   | Simpler                          | More explicit           |
 
 ## When to Use Each
 
 ### Use useDeferredValue when:
+
 - ✅ You have a value that triggers expensive renders
 - ✅ You want the simplest solution
 - ✅ You're working with props or context (values you don't control)
 - ✅ You're okay comparing values to detect updates
 
 ### Use useTransition when:
+
 - ✅ You need explicit control over what's deferred
 - ✅ You want a built-in `isPending` state
 - ✅ You're updating your own state

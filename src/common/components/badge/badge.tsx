@@ -4,8 +4,7 @@ import { badgeVariants } from './badge.classes';
 import { cn } from '../../utilities/cn';
 
 export interface BadgeProps
-  extends ComponentPropsWithoutRef<'span'>,
-    VariantProps<typeof badgeVariants> {
+  extends ComponentPropsWithoutRef<'span'>, VariantProps<typeof badgeVariants> {
   children?: ReactNode;
   'data-testid'?: string;
 }

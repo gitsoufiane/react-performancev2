@@ -33,17 +33,13 @@ export function DataTableTab() {
     <div className="space-y-4">
       <div className="flex items-start justify-between">
         <div>
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-            Employee Data
-          </h2>
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">Employee Data</h2>
           <p className="text-sm text-slate-600 dark:text-slate-400">
             A large table with 100 rows of data
           </p>
         </div>
         <div className="rounded-lg bg-blue-50 px-3 py-1 dark:bg-blue-900/20">
-          <p className="text-xs font-medium text-blue-800 dark:text-blue-200">
-            Lazy Loaded
-          </p>
+          <p className="text-xs font-medium text-blue-800 dark:text-blue-200">Lazy Loaded</p>
         </div>
       </div>
 
@@ -55,7 +51,9 @@ export function DataTableTab() {
               <th className="px-4 py-3 font-semibold text-slate-900 dark:text-slate-100">Name</th>
               <th className="px-4 py-3 font-semibold text-slate-900 dark:text-slate-100">Email</th>
               <th className="px-4 py-3 font-semibold text-slate-900 dark:text-slate-100">Role</th>
-              <th className="px-4 py-3 font-semibold text-slate-900 dark:text-slate-100">Department</th>
+              <th className="px-4 py-3 font-semibold text-slate-900 dark:text-slate-100">
+                Department
+              </th>
               <th className="px-4 py-3 font-semibold text-slate-900 dark:text-slate-100">Status</th>
             </tr>
           </thead>
@@ -87,8 +85,8 @@ export function DataTableTab() {
       </div>
 
       <p className="text-sm text-slate-600 dark:text-slate-400">
-        This component was only loaded when you clicked this tab. Check your Network tab to see
-        the separate chunk that was downloaded.
+        This component was only loaded when you clicked this tab. Check your Network tab to see the
+        separate chunk that was downloaded.
       </p>
     </div>
   );

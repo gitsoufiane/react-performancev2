@@ -11,8 +11,7 @@ import { cn } from '../../utilities/cn';
 import { avatarVariants, avatarImageVariants, avatarFallbackVariants } from './avatar.classes';
 
 export interface AvatarProps
-  extends Omit<ComponentPropsWithoutRef<'div'>, 'children'>,
-    VariantProps<typeof avatarVariants> {
+  extends Omit<ComponentPropsWithoutRef<'div'>, 'children'>, VariantProps<typeof avatarVariants> {
   src?: string;
   alt: string;
   fallback?: string;

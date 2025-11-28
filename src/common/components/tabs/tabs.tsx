@@ -131,8 +131,7 @@ export const TabsList = forwardRef<HTMLDivElement, TabsListProps>(
 TabsList.displayName = 'TabsList';
 
 export interface TabsTriggerProps
-  extends ComponentPropsWithoutRef<'button'>,
-    VariantProps<typeof tabsTriggerVariants> {
+  extends ComponentPropsWithoutRef<'button'>, VariantProps<typeof tabsTriggerVariants> {
   value: string;
   children?: ReactNode;
 }

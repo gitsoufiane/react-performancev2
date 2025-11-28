@@ -8,8 +8,7 @@ import {
 import { cn } from '../../utilities/cn';
 
 export interface ProgressProps
-  extends Omit<ComponentPropsWithoutRef<'div'>, 'value'>,
-    VariantProps<typeof progressBarVariants> {
+  extends Omit<ComponentPropsWithoutRef<'div'>, 'value'>, VariantProps<typeof progressBarVariants> {
   value?: number;
   max?: number;
   label?: string;

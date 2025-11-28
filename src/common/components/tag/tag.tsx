@@ -13,8 +13,7 @@ import { focusVisibleRingStyles, iconSizes } from '../../utilities/styles';
 import { tagVariants, tagRemoveButtonVariants } from './tag.classes';
 
 export interface TagProps
-  extends Omit<ComponentPropsWithoutRef<'span'>, 'children'>,
-    VariantProps<typeof tagVariants> {
+  extends Omit<ComponentPropsWithoutRef<'span'>, 'children'>, VariantProps<typeof tagVariants> {
   children: ReactNode;
   removable?: boolean;
   onRemove?: () => void;

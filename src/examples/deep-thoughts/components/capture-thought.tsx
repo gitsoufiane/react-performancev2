@@ -4,15 +4,10 @@ import { useState } from 'react';
 
 type CaptureThoughtProps = {
   onSubmit: (content: string) => void;
-
 };
 
-export const CaptureThought = ({
-
-  onSubmit,
-
-}: CaptureThoughtProps ) => {
-    const [draftThought, setDraftThought] = useState('');
+export const CaptureThought = ({ onSubmit }: CaptureThoughtProps) => {
+  const [draftThought, setDraftThought] = useState('');
   return (
     <div className="py-4">
       <form

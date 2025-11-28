@@ -10,6 +10,6 @@ if (root) {
   createRoot(root).render(
     <StrictMode>
       <Application />
-    </StrictMode>
+    </StrictMode>,
   );
 }

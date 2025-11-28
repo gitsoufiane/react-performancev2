@@ -9,7 +9,8 @@ import { type Role, type MultiModalContent } from './chat-message.types';
 import { cn } from '../../utilities/cn';
 
 export interface ChatMessageProps
-  extends Omit<ComponentPropsWithoutRef<'div'>, 'content' | 'role'>,
+  extends
+    Omit<ComponentPropsWithoutRef<'div'>, 'content' | 'role'>,
     VariantProps<typeof chatMessageVariants> {
   role: Role;
   content: string | MultiModalContent[];

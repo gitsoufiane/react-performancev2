@@ -103,13 +103,11 @@ function Application() {
     <AppProvider>
       <Container className="my-8 space-y-8">
         <section>
-          <h1 className="mb-2 text-3xl font-bold text-slate-900 dark:text-slate-100">
-            Contextual
-          </h1>
+          <h1 className="mb-2 text-3xl font-bold text-slate-900 dark:text-slate-100">Contextual</h1>
           <p className="text-slate-600 dark:text-slate-400">
-            Open your browser console and change any setting. Notice how ALL 4 cards re-render,
-            even though each card only uses a small part of the context? That&apos;s the Context
-            API re-render problem!
+            Open your browser console and change any setting. Notice how ALL 4 cards re-render, even
+            though each card only uses a small part of the context? That&apos;s the Context API
+            re-render problem!
           </p>
           <div className="mt-4 rounded-md bg-red-50 p-4 dark:bg-red-900/20">
             <p className="text-sm font-medium text-red-800 dark:text-red-200">
@@ -127,7 +125,9 @@ function Application() {
           <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
             <li>• Single context holds user, theme, notifications, and stats</li>
             <li>• When ANY value changes, the context value reference changes</li>
-            <li>• ALL components using useContext re-render, even if they don&apos;t use that value</li>
+            <li>
+              • ALL components using useContext re-render, even if they don&apos;t use that value
+            </li>
             <li>• Functions are recreated on every render (unstable references)</li>
             <li>• This scales poorly as the app grows</li>
           </ul>

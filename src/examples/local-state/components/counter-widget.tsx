@@ -1,15 +1,14 @@
 import { Card } from '$components/card';
 import { Button } from '$components/button';
+import { useState } from 'react';
 
 // WRONG: Receiving state and setters as props
-interface CounterWidgetWrongProps {
-  count: number;
-  onIncrement: () => void;
-  onDecrement: () => void;
-  onReset: () => void;
-}
 
-export function CounterWidgetWrong({ count, onIncrement, onDecrement, onReset }: CounterWidgetWrongProps) {
+export function CounterWidgetWrong() {
+  const [count, setCount] = useState(0);
+  const onIncrement = () => setCount(count + 1);
+  const onDecrement = () => setCount(count - 1);
+  const onReset = () => setCount(0);
   console.log('CounterWidget rendered');
 
   return (
@@ -18,7 +17,8 @@ export function CounterWidgetWrong({ count, onIncrement, onDecrement, onReset }:
         Counter Widget
       </h3>
       <p className="mb-4 text-sm text-slate-600 dark:text-slate-400">
-        A simple counter. Notice this re-renders when ANY widget updates because state is in the parent.
+        A simple counter. Notice this re-renders when ANY widget updates because state is in the
+        parent.
       </p>
 
       <div className="flex items-center justify-center space-x-4">

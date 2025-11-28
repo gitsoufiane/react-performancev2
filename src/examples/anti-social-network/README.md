@@ -85,7 +85,7 @@ function Application() {
       }
       // Otherwise, it's being deleted
       return state.filter((post) => post.id !== newPost.id);
-    }
+    },
   );
 
   // Fetch initial posts
@@ -181,7 +181,7 @@ function Application() {
 
       <section>
         {isLoading ? (
-          <div className="text-center py-12">
+          <div className="py-12 text-center">
             <p className="text-slate-600 dark:text-slate-400">Loading posts...</p>
           </div>
         ) : (
@@ -198,6 +198,7 @@ export default Application;
 ### Key Changes
 
 1. **Added `useOptimistic` hook**:
+
    ```tsx
    const [optimisticPosts, addOptimisticPost] = useOptimistic<OptimisticPost[], OptimisticPost>(
      posts,
@@ -206,7 +207,7 @@ export default Application;
          return [newPost, ...state];
        }
        return state.filter((post) => post.id !== newPost.id);
-     }
+     },
    );
    ```
 
@@ -247,13 +248,13 @@ function Application() {
   // Separate optimistic state for creates
   const [optimisticCreates, addOptimisticCreate] = useOptimistic<OptimisticPost[], OptimisticPost>(
     [],
-    (state, newPost) => [...state, newPost]
+    (state, newPost) => [...state, newPost],
   );
 
   // Separate optimistic state for deletes
   const [optimisticDeletes, addOptimisticDelete] = useOptimistic<number[], number>(
     [],
-    (state, deletedId) => [...state, deletedId]
+    (state, deletedId) => [...state, deletedId],
   );
 
   // Combine all posts, filtering out deleted ones
@@ -293,10 +294,12 @@ function Application() {
 ```
 
 **Pros**:
+
 - More explicit about what's being created vs deleted
 - Easier to track pending operations separately
 
 **Cons**:
+
 - More complex state management
 - Need to combine states for rendering
 
@@ -315,6 +318,7 @@ For this example, the single `useOptimistic` approach is simpler and sufficient.
 ### Success Criteria
 
 After optimization:
+
 - ✅ Posts appear immediately when created (no waiting)
 - ✅ Posts disappear immediately when deleted (no waiting)
 - ✅ Pending posts show visual feedback (opacity + "Saving..." text)
@@ -346,12 +350,14 @@ const handleAction = async () => {
 ### When to Use useOptimistic
 
 Perfect for:
+
 - Creating/deleting items in a list
 - Toggling boolean values (like/favorite)
 - Simple updates where you can predict the result
 - Any action where waiting for server feels slow
 
 Not ideal for:
+
 - Complex calculations that depend on server logic
 - Actions with unpredictable results
 - Cases where showing wrong data temporarily is unacceptable
@@ -388,7 +394,7 @@ export interface OptimisticPost extends Post {
 <div className={post.isPending ? 'opacity-50' : 'opacity-100'}>
   {post.title}
   {post.isPending && <span>Saving...</span>}
-</div>
+</div>;
 ```
 
 ### Temporary IDs
@@ -407,14 +413,14 @@ The real ID from the server will replace it when `actualState` updates.
 
 ## Comparison: With vs Without useOptimistic
 
-| Feature | Without | With useOptimistic |
-|---------|---------|-------------------|
-| **Create post** | Wait 500ms+ | Instant |
-| **Delete post** | Wait 500ms+ | Instant |
-| **On slow network** | Unusable | Still responsive |
-| **User experience** | Frustrating | Smooth |
-| **Visual feedback** | None | "Saving..." indicator |
-| **Error handling** | Manual | Automatic reversion |
+| Feature             | Without     | With useOptimistic    |
+| ------------------- | ----------- | --------------------- |
+| **Create post**     | Wait 500ms+ | Instant               |
+| **Delete post**     | Wait 500ms+ | Instant               |
+| **On slow network** | Unusable    | Still responsive      |
+| **User experience** | Frustrating | Smooth                |
+| **Visual feedback** | None        | "Saving..." indicator |
+| **Error handling**  | Manual      | Automatic reversion   |
 
 ## Testing on Slow Network
 

@@ -5,7 +5,8 @@ import { animations, srOnlyStyles } from '../../utilities/styles';
 import { spinnerVariants } from './spinner.classes';
 
 export interface SpinnerProps
-  extends Omit<ComponentPropsWithoutRef<'div'>, 'children' | 'color'>,
+  extends
+    Omit<ComponentPropsWithoutRef<'div'>, 'children' | 'color'>,
     VariantProps<typeof spinnerVariants> {
   label?: string;
   'data-testid'?: string;

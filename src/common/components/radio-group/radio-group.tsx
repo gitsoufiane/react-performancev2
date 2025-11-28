@@ -18,7 +18,8 @@ interface RadioGroupContextValue {
 const RadioGroupContext = createContext<RadioGroupContextValue | null>(null);
 
 export interface RadioGroupProps
-  extends Omit<ComponentPropsWithoutRef<'div'>, 'onChange'>,
+  extends
+    Omit<ComponentPropsWithoutRef<'div'>, 'onChange'>,
     VariantProps<typeof radioGroupVariants> {
   value?: string;
   onChange?: (value: string) => void;

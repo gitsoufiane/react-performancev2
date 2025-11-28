@@ -4,8 +4,7 @@ import { tooltipVariants } from './tooltip.classes';
 import { cn } from '../../utilities/cn';
 
 export interface TooltipProps
-  extends Omit<ComponentPropsWithoutRef<'span'>, 'content'>,
-    VariantProps<typeof tooltipVariants> {
+  extends Omit<ComponentPropsWithoutRef<'span'>, 'content'>, VariantProps<typeof tooltipVariants> {
   children: ReactNode;
   content: ReactNode;
 }

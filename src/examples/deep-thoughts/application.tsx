@@ -12,7 +12,6 @@ import { createThought } from './utilities/create-thought';
 import { initialThoughts } from './utilities/initial-thoughts';
 
 function Application() {
-
   const [thoughts, setThoughts] = useState<DeepThought[]>(initialThoughts);
 
   function addThought(content: string) {
@@ -40,9 +39,7 @@ function Application() {
 
   return (
     <Container className="my-8 flex flex-col gap-8">
-      <CaptureThought
-        onSubmit={addThought}
-      />
+      <CaptureThought onSubmit={addThought} />
 
       <Thoughts
         updateThought={updateThought}

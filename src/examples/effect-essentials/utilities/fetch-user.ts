@@ -12,11 +12,11 @@ const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
  * @returns Promise resolving to the User data
  */
 export async function fetchUser(userId: number): Promise<User> {
-	// Random delay between 500ms and 2000ms
-	const delay = 500 + Math.random() * 1500;
-	await sleep(delay);
+  // Random delay between 500ms and 2000ms
+  const delay = 500 + Math.random() * 1500;
+  await sleep(delay);
 
-	// Use the JSONPlaceholder API via our existing getUser utility
-	const user = await getUser(userId);
-	return user;
+  // Use the JSONPlaceholder API via our existing getUser utility
+  const user = await getUser(userId);
+  return user;
 }

@@ -23,8 +23,8 @@ function Application() {
           Lazy Loading Demo
         </h1>
         <p className="text-slate-600 dark:text-slate-400">
-          Right now, ALL tab components are loaded upfront, even if you never visit them.
-          Open the Network tab and refresh - you&apos;ll see everything loads immediately.
+          Right now, ALL tab components are loaded upfront, even if you never visit them. Open the
+          Network tab and refresh - you&apos;ll see everything loads immediately.
         </p>
         <div className="mt-4 rounded-md bg-red-50 p-4 dark:bg-red-900/20">
           <p className="text-sm font-medium text-red-800 dark:text-red-200">
@@ -40,7 +40,7 @@ function Application() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`border-b-2 pb-4 pt-2 text-sm font-medium transition-colors ${
+                className={`border-b-2 pt-2 pb-4 text-sm font-medium transition-colors ${
                   activeTab === tab.id
                     ? 'border-blue-500 text-blue-600 dark:text-blue-400'
                     : 'border-transparent text-slate-600 hover:border-slate-300 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100'
