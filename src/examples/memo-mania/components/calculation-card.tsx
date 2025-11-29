@@ -15,9 +15,16 @@ interface CalculationCardProps {
   onDelete: (id: string) => void;
 }
 
-export const CalculationCard = memo(function CalculationCard({ calculation, onUpdate, onDelete }: CalculationCardProps) {
+export const CalculationCard = memo(function CalculationCard({
+  calculation,
+  onUpdate,
+  onDelete,
+}: CalculationCardProps) {
   // This expensive calculation runs on EVERY render of ANY card
-  const result = useMemo(() => calculate(calculation.type, calculation.input), [calculation.type, calculation.input]);
+  const result = useMemo(
+    () => calculate(calculation.type, calculation.input),
+    [calculation.type, calculation.input],
+  );
 
   const label = getCalculationLabel(calculation.type);
   const description = getCalculationDescription(calculation.type);

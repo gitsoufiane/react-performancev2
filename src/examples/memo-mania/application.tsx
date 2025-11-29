@@ -31,11 +31,11 @@ function Application() {
   }
 
   const updateCalculation = useCallback((id: string, input: number) => {
-    setCalculations(prev=> prev.map((calc) => (calc.id === id ? { ...calc, input } : calc)));
+    setCalculations((prev) => prev.map((calc) => (calc.id === id ? { ...calc, input } : calc)));
   }, []);
 
   const deleteCalculation = useCallback((id: string) => {
-    setCalculations(prev => prev.filter((calc) => calc.id !== id));
+    setCalculations((prev) => prev.filter((calc) => calc.id !== id));
   }, []);
 
   return (

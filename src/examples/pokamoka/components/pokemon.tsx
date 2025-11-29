@@ -28,16 +28,7 @@ const typeColors: Record<string, 'neutral' | 'success' | 'warning' | 'error' | '
   Steel: 'neutral',
 };
 
-const Pokemon = ({
-  id,
-  name,
-  type,
-  species,
-  description,
-  base,
-  profile,
-  image,
-}: PokemonRecord) => {
+const Pokemon = ({ id, name, type, species, description, base, profile, image }: PokemonRecord) => {
   return (
     <Card className="max-w-md">
       <CardHeader>

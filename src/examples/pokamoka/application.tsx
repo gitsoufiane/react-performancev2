@@ -18,9 +18,7 @@ const Application = () => {
     startTransition(() => {
       setSearchQuery(newValue);
     });
-  }
-
-
+  };
 
   return (
     <Container className="space-y-8">
